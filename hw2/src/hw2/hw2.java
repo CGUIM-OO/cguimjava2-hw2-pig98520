@@ -1,11 +1,11 @@
-﻿package hw2;
+package hw2;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * @author TODO: B0344218_葉建夆
+ * @author TODO: please add student ID and name here
  * Try to write some comments for your codes (methods, 15 points)
  */
 public class hw2 {
@@ -28,8 +28,8 @@ public class hw2 {
 	}
 	/**
 	 * This method is used for checking your result, not a part of your HW2
-	 * @param allCards 所有的牌
-	 * @param nDeck 總共有幾副牌
+	 * @param allCards �Ҧ����P
+	 * @param nDeck �`�@���X�ƵP
 	 * @return
 	 */
 	private static boolean isAllCardsCorrect(ArrayList<Card> allCards,int nDeck){
@@ -79,10 +79,10 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
-		for(int card_n=0;card_n<nDeck;card_n++) { //有幾副牌
-			for(int card_s=1;card_s<=4;card_s++) //牌的花色 S,H,D,C
+		for(int card_n=0;card_n<nDeck;card_n++) { //���X�ƵP
+			for(int card_s=1;card_s<=4;card_s++) //�P����� S,H,D,C
 			{
-				for(int card_r=1;card_r<=13;card_r++) //牌的點數 1-13
+				for(int card_r=1;card_r<=13;card_r++) //�P���I�� 1-13
 				{
 					Card card=new Card(card_s,card_r);
 					cards.add(card);
@@ -95,10 +95,10 @@ class Deck{
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-		int deck_count=1; //計算第幾副撲克牌的數量
+		int deck_count=1;
 		for(int i=0;i<cards.size();i++) {
 			if(i%52==0) {
-				System.out.println("\nDeck_"+deck_count); //印出第幾副牌
+				System.out.println("\nDeck_"+deck_count);
 				deck_count++;
 				}
 			cards.get(i).printCard();
@@ -125,7 +125,7 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-		switch(suit) { //用suit判斷並印出花色,rank判斷並印出點數(JQK特例)
+		switch(suit) {
 		case 1:
 			switch(rank) {
 			case 11:
