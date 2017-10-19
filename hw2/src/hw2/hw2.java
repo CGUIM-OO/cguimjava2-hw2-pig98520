@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * @author TODO: please add student ID and name here
+ * @author TODO: B0344218_葉建夆
  * Try to write some comments for your codes (methods, 15 points)
  */
 public class hw2 {
@@ -84,9 +84,8 @@ class Deck{
 			{
 				for(int card_r=1;card_r<=13;card_r++) //牌的點數 1-13
 				{
-					Card card=new Card(card_s,card_r);
-					cards.add(card);
-				
+					Card card=new Card(card_s,card_r); //建立一副新的牌,並填入花色跟數字
+					cards.add(card); //將剛剛建立的牌存入ArrayList裡面
 				}
 			}
 		}
@@ -95,13 +94,13 @@ class Deck{
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-		int deck_count=1;
+		int deck_count=1; //計算第幾副撲克牌的數量
 		for(int i=0;i<cards.size();i++) {
 			if(i%52==0) {
-				System.out.println("\nDeck_"+deck_count);
+				System.out.println("\nDeck_"+deck_count); //印出第幾副牌
 				deck_count++;
 				}
-			cards.get(i).printCard();
+			cards.get(i).printCard(); //印出所有的牌
 			}
 	}
 	public ArrayList<Card> getAllCards(){
@@ -125,7 +124,7 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-		switch(suit) {
+		switch(suit) { //用suit判斷並印出花色,rank判斷並印出點數(JQK特例)
 		case 1:
 			switch(rank) {
 			case 11:

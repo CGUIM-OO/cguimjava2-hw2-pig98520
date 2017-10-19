@@ -1,4 +1,4 @@
-﻿package hw2;
+﻿package HW2;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author TODO: B0344218_葉建夆
  * Try to write some comments for your codes (methods, 15 points)
  */
-public class hw2 {
+public class HW2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -84,9 +84,8 @@ class Deck{
 			{
 				for(int card_r=1;card_r<=13;card_r++) //牌的點數 1-13
 				{
-					Card card=new Card(card_s,card_r);
-					cards.add(card);
-				
+					Card card=new Card(card_s,card_r); //建立一副新的牌,並填入花色跟數字
+					cards.add(card); //將剛剛建立的牌存入ArrayList裡面
 				}
 			}
 		}
@@ -101,7 +100,7 @@ class Deck{
 				System.out.println("\nDeck_"+deck_count); //印出第幾副牌
 				deck_count++;
 				}
-			cards.get(i).printCard();
+			cards.get(i).printCard(); //印出所有的牌
 			}
 	}
 	public ArrayList<Card> getAllCards(){
